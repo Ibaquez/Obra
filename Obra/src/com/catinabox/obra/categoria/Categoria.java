@@ -6,7 +6,7 @@ public class Categoria {
 	public String getNombre() {
 		return nombre;
 	}
-
+	// A ver si esto viaja?
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
