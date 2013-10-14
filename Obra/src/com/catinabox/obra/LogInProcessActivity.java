@@ -11,6 +11,7 @@ public class LogInProcessActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.loginprocess);
 	}
+	// ultimo intento de cerrar
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
