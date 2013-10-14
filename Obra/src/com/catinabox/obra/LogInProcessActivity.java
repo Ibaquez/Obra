@@ -14,7 +14,7 @@ public class LogInProcessActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present. kk
+		// Inflate the menu; this adds items to the action bar if it is present. kktt
 		getMenuInflater().inflate(R.menu.log_in_process, menu);
 		return true;
 	}
