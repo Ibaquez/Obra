@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Obra Digital</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_mensaje">Mensaje</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_servicio">ServicioActivity</string>
+    <string name="title_activity_categoria">Mercado de Materiales</string>
+    <string name="title_activity_sub_categoria">SubCategoriaActivity</string>
+    <string name="title_activity_criterio">Mercado de Materiales</string>
+    <string name="title_activity_log_in_process">Login in</string>
+
+</resources>

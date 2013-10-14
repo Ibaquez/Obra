@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="Id"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/unidad"
+            android:layout_toRightOf="@+id/id"
+            android:text="Texto gfj h jhgj h ghj ghj  ffg sdff gh fdgh dfhdfg dfh trdf hdft dfsdrt h fgh fgh  hg " />
+
+                <TextView
+                    android:id="@+id/precio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:text="AR$ 10"/>
+
+                <TextView
+                    android:id="@+id/unidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/precio"
+                    android:layout_alignBottom="@+id/precio"
+                    android:layout_toLeftOf="@+id/precio"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text=" m2 "
+                    android:textColor="@color/black_overlay" />
+
+</RelativeLayout>

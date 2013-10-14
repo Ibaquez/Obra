@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.catinabox.obra"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.catinabox.obra.activities.LogInActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.activities.MensajeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_mensaje" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.activities.ServicioActivity"
+            android:label="@string/title_activity_servicio" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.categoria.CategoriaActivity"
+            android:label="@string/title_activity_categoria" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.subcategoria.SubCategoriaActivity"
+            android:label="@string/title_activity_sub_categoria" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.material.MaterialActivity"
+            android:label="@string/title_activity_sub_categoria" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.activities.CriterioActivity"
+            android:label="@string/title_activity_criterio" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.LogInProcessActivity"
+            android:label="@string/title_activity_log_in_process" >
+        </activity>
+    </application>
+
+</manifest>

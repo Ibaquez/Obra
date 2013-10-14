@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp"
+        android:src="@drawable/logoobra" />
+
+    <Button
+        android:id="@+id/mercMateriales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mercado de Materiales"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/ayuda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Criterio de costos"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+	<TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Si entra por primera vez"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+	<TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="le recomendamos leer estos criterios"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+</LinearLayout>
