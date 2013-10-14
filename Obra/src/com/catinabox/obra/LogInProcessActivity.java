@@ -12,7 +12,7 @@ public class LogInProcessActivity extends Activity {
 		setContentView(R.layout.loginprocess);
 	}
 	// ultimo intento de cerrar
-
+	// Este es solo un commit
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.log_in_process, menu);
