@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/razonSocial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Alejandro Torchio"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/razonSocial"
+        android:layout_below="@+id/razonSocial"
+        android:text="Proyecto y construcción con sistema Steel Frame" />
+
+    <TextView
+        android:id="@+id/direccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/descripcion"
+        android:layout_below="@+id/descripcion"
+        android:text="Avelino Diaz 1956 - C.A.B.A. - C1406IBN"
+        android:textColor="@color/black_overlay" />
+
+        <TextView
+            android:id="@+id/localidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/descripcion"
+            android:layout_alignTop="@+id/razonSocial"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Bernal"
+            android:textColor="@color/black_overlay" />
+        
+</RelativeLayout>
