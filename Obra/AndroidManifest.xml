@@ -30,6 +30,7 @@
             android:label="@string/title_activity_servicio" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -52,6 +53,14 @@
         <activity
             android:name="com.catinabox.obra.LogInProcessActivity"
             android:label="@string/title_activity_log_in_process" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.rubro.RubroActivity"
+            android:label="@string/title_activity_rubro" >
+        </activity>
+        <activity
+            android:name="com.catinabox.obra.ficha.FichaActivity"
+            android:label="@string/title_activity_ficha" >
         </activity>
     </application>
 

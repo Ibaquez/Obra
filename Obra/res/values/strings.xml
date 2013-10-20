@@ -12,5 +12,7 @@
     <string name="title_activity_sub_categoria">SubCategoriaActivity</string>
     <string name="title_activity_criterio">Mercado de Materiales</string>
     <string name="title_activity_log_in_process">Login in</string>
+    <string name="title_activity_rubro">Rubros</string>
+    <string name="title_activity_ficha">Fichas</string>
 
 </resources>

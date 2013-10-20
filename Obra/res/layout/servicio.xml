@@ -14,6 +14,13 @@
         android:src="@drawable/logoobra" />
 
     <Button
+        android:id="@+id/guiaObra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guía de Obra"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    
+    <Button
         android:id="@+id/mercMateriales"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

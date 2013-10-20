@@ -7,6 +7,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -19,9 +20,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.catinabox.obra.R;
+import com.catinabox.obra.categoria.CategoriaActivity;
 
 public class LogInActivity extends Activity implements OnClickListener{
 	private String logInUrl = "http://www.revistaobra.com.ar/android/login.php";
+	private ProgressDialog dialog;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +41,12 @@ public class LogInActivity extends Activity implements OnClickListener{
 			this.onClick(null);
 		}
 	}
-
-	private void setEnable(Boolean enable){
-		((EditText) findViewById(R.id.usuario)).setEnabled(enable);
-		((EditText) findViewById(R.id.password)).setEnabled(enable);
-		((Button) findViewById(R.id.login)).setEnabled(enable);
-	} 
 	
 	@Override
 	public void onClick(View arg0) {
-		this.setEnable(false);
+		dialog = new ProgressDialog(LogInActivity.this);
+		dialog.setMessage("Autenticando suscripcion...");
+		dialog.show();
 		new LogIn().execute(((EditText) findViewById(R.id.usuario)).getText().toString(),((EditText) findViewById(R.id.password)).getText().toString());
 	}
 	
@@ -66,9 +65,9 @@ public class LogInActivity extends Activity implements OnClickListener{
 	}
 	
 	private void onLogIn(){
-		Intent myIntent = new Intent(LogInActivity.this, ServicioActivity.class);
+		Intent myIntent = new Intent(LogInActivity.this, CategoriaActivity.class);
 		LogInActivity.this.startActivity(myIntent);
-		this.setEnable(true);
+		//dialog.hide(); 
 	}
 	
 	private void onMessage(String mensaje){
@@ -76,7 +75,7 @@ public class LogInActivity extends Activity implements OnClickListener{
 		myIntent.putExtra("mensaje",mensaje);
 		myIntent.putExtra("respuesta","true");
 		LogInActivity.this.startActivity(myIntent);
-		this.setEnable(true);
+		//dialog.hide(); 
 	}
 	
 	private void onError(String mensaje){
@@ -84,7 +83,7 @@ public class LogInActivity extends Activity implements OnClickListener{
 		myIntent.putExtra("mensaje",mensaje);
 		myIntent.putExtra("respuesta","false");
 		LogInActivity.this.startActivity(myIntent);
-		this.setEnable(true);
+		//dialog.hide(); 
 	}
 	
 	

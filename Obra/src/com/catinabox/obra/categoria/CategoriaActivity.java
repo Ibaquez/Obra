@@ -11,6 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,11 +22,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.catinabox.obra.R;
+import com.catinabox.obra.material.MaterialActivity;
 import com.catinabox.obra.subcategoria.SubCategoriaActivity;
 
 public class CategoriaActivity extends Activity implements OnItemClickListener {
 	private String categoriaUrl = "http://www.revistaobra.com.ar/android/categorias.php";
 	private ArrayList<Categoria> categorias = new ArrayList<Categoria>();
+	private ProgressDialog dialog;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class CategoriaActivity extends Activity implements OnItemClickListener {
 		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.categorias);
 		new Servicio().execute();
+		dialog = new ProgressDialog(CategoriaActivity.this);
+		dialog.setMessage("Actualizando informacion...");
+		dialog.show();
 	}
 	
 	@Override
@@ -47,7 +53,7 @@ public class CategoriaActivity extends Activity implements OnItemClickListener {
 		lista = (ListView) findViewById(R.id.categorias);
 		lista.setAdapter(new CategoriaAdapter(CategoriaActivity.this,categorias));
 		lista.setOnItemClickListener(this);
-		((TextView) findViewById(R.id.loadingText)).setVisibility(View.GONE);
+		dialog.hide(); 
 	}
 	
 	private class Servicio extends AsyncTask<String, Void, Boolean>{

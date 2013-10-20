@@ -11,6 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -21,12 +22,14 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.catinabox.obra.R;
+import com.catinabox.obra.categoria.CategoriaActivity;
 import com.catinabox.obra.material.MaterialActivity;
 
 public class SubCategoriaActivity extends Activity implements OnItemClickListener {
 	private String subCategoriaUrl = "http://www.revistaobra.com.ar/android/subcategorias.php";
 	private ArrayList<SubCategoria> subcategorias = new ArrayList<SubCategoria>();
 	private String categoria;
+	private ProgressDialog dialog;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,9 @@ public class SubCategoriaActivity extends Activity implements OnItemClickListene
 		//((TextView) findViewById(R.id.path)).setText("Materiales > " + categoria);
 		this.setTitle("Materiales > " + categoria);
 		new Servicio().execute();
+		dialog = new ProgressDialog(SubCategoriaActivity.this);
+		dialog.setMessage("Actualizando informacion...");
+		dialog.show();
 	}
 
 	@Override
@@ -55,7 +61,7 @@ public class SubCategoriaActivity extends Activity implements OnItemClickListene
 		lista = (ListView) findViewById(R.id.subcategorias);
 		lista.setAdapter(new SubCategoriaAdapter(SubCategoriaActivity.this,subcategorias));
 		lista.setOnItemClickListener(this);
-		((TextView) findViewById(R.id.loadingText)).setVisibility(View.GONE);
+		dialog.hide(); 
 	}
 	
 	private class Servicio extends AsyncTask<String, Void, Boolean>{
